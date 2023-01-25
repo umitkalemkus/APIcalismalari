@@ -37,6 +37,9 @@ public class API_GetResquest {
 
     // 3- Responsu kaydet
 
+
+
+
          Response response = given().with().get(url);
        response.prettyPrint();
 
