@@ -56,5 +56,7 @@ public class Get02 {
         System.out.println("Single Header2 :" + response.getHeader("Date"));
         System.out.println("Single Header3 :" + response.getHeader("Connection"));
 
+        Assert.assertFalse(str.contains("Clarusway"));
+
     }
 }
