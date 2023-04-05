@@ -25,6 +25,12 @@ public class Get03 {
 		And
 		    “userId” in 1 olduğunu verify et
 
+
+
+
+
+
+
 		   */
     @Test
          public void get03(){
