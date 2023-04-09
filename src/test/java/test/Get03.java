@@ -1,5 +1,6 @@
 package test;
 
+import BaseURLs.JsonPlaceHolderBaseURL;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -7,7 +8,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class Get03 {
+public class Get03 extends JsonPlaceHolderBaseURL {
 
  /*
         Given
@@ -36,15 +37,17 @@ public class Get03 {
          public void get03(){
 
 
-        String URL = "https://jsonplaceholder.typicode.com/todos/2";
+        specification.pathParams("todosPath","");
 
 
-        Response response = given().when().get(URL);
+
+       Response response = given().when().get(URL);
         response.prettyPrint();
 
         response.then().assertThat().statusCode(200).contentType(ContentType.JSON);
         String str = response.asString();
         System.out.println("str = " + str);
+        System.out.println("str5");
 
 
     }
