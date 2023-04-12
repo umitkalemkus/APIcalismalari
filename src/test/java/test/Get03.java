@@ -41,7 +41,12 @@ public class Get03 extends JsonPlaceHolderBaseURL {
 
 
 
-       Response response = given().when().get(URL);
+
+
+
+
+
+        Response response = given().when().get(URL);
         response.prettyPrint();
 
         response.then().assertThat().statusCode(200).contentType(ContentType.JSON);
