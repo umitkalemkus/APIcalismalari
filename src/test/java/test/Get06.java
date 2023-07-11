@@ -52,6 +52,9 @@ public class Get06 extends GorestCoBaseURL {
         JsonPath jsonPath = response.jsonPath();
         assertEquals(3582393,jsonPath.getInt("user_id"));
         assertEquals("Bos arbustum tam aranea veritas facilis accusantium baiulus.",jsonPath.getString("title"));
+        assertEquals("2023-07-29T00:00:00.000+05:30",jsonPath.getString("due_on"));
+        assertEquals("completed",jsonPath.getString("status"));
+
 
 
 
