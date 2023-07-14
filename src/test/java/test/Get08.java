@@ -101,16 +101,25 @@ public class Get08  extends SwapiBaseUrl {
               equalTo(ExpectedDataMap.get("consumables")),"vehicle_class",equalTo(ExpectedDataMap.get("vehicle_class")),"pilots", equalTo(ExpectedDataMap.get("pilots")),"films",
               equalTo(ExpectedDataMap.get("films")),"created",equalTo(ExpectedDataMap.get("created")),"edited",equalTo(ExpectedDataMap.get("edited")),"url",equalTo(ExpectedDataMap.get("url"))
               );
-*/
-     /*   JsonPath jsonPath = response.jsonPath();
+*/            //2. way
+            JsonPath jsonPath = response.jsonPath();
 
-        Assert.assertEquals("Corellia Mining Corporation",jsonPath.getString("manufacturer"));*/
+        Assert.assertEquals("Corellia Mining Corporation",jsonPath.getString("manufacturer"));
+        Assert.assertEquals("Digger Crawler",jsonPath.getString("model"));
 
 
-      //2. way
 
+
+
+
+
+
+      //3. way
       Map<String,Object> actualData = response.as(HashMap.class);
       System.out.println("actualData = " + actualData);
+
+
+
 
 
    /*
@@ -125,9 +134,14 @@ public class Get08  extends SwapiBaseUrl {
 
 
       Assert.assertEquals(ExpectedDataMap.get("name"), actualData.get("name"));
+      Assert.assertEquals(ExpectedDataMap.get("model"), actualData.get("model"));
+      Assert.assertEquals(ExpectedDataMap,actualData);
 
 
     }
+
+
+
 
 
 
