@@ -34,6 +34,9 @@ public class Get05 extends TheMovieUrl {
     public void get05(){
 
         // 1- Set URL
+
+
+
         specification.pathParams("moviePath","movie","popularPath","popular").queryParam("api_key","4c841d9ec32b7f8c0069cf3fec36774f");
 
         // Set a expected data
