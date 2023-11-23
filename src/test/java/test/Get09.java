@@ -62,13 +62,15 @@ public class Get09 extends JsonPlaceHolderBaseUR {
 
          //1. way
 
+
+
          response.then().assertThat().statusCode(200).body("userId",
                  equalTo(1),"id" ,equalTo(2) ,"title",
                  equalTo("quis ut nam facilis et officia qui"),"completed",equalTo(false));
 
 
          // 2.way
-         JsonPath jsonPath = response.jsonPath();  //(Ters)
+          //(Ters)
 
         Assert.assertEquals(1,jsonPath.getInt("userId"));
         Assert.assertEquals(2,jsonPath.getInt("id"));
