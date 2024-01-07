@@ -29,6 +29,8 @@ public class Get04 extends JsonPlaceHolderBaseUR {
         specification.pathParam("usersPath","users");
 
 
+
+
         Response response = given().spec(specification).when().get("/{usersPath}");
         response.prettyPrint();
 
